@@ -1,11 +1,13 @@
+'use client'
+
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useEffect, useState } from 'react'
+import XPSection from '@/components/XPSection'
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -17,19 +19,25 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.navbar}>
         </div>
+
         <div className={styles.name}>
           <h1>Jake Lovett</h1>
           <p>Web Dev</p>
         </div>
+
         <div className={styles.dashes}>
         </div>
+
         <div className={styles.summary}>
           <p>
             My name is Jake.  I'm from Birmingham, AL, and I graduated from the Innovate Birmingham coding bootcamp in Dec. 2019. I worked as a T.A. at Innovate for 2 years before moving on to JWEB Development.
             <br />
             <br />
             <br />
-            In my free time, I play games, make music, draw, and I do some graphic design.
+            Experienced in:
+            <div className={styles.scrolling}>
+              <XPSection />
+            </div>
           </p>
         </div>
         <div className={styles.links}>
