@@ -39,7 +39,7 @@ export default function Home() {
 
         <div className={styles.summary}>
           <p className={styles.summaryIntro}>
-            My name is Jake.  I'm from Birmingham, AL, and I graduated from the Innovate Birmingham coding bootcamp in Dec. 2019. I worked as a T.A. at Innovate for 2 years before moving on to JWEB Development.
+            My name is Jake.  I am from Birmingham, AL, and I graduated from the Innovate Birmingham coding bootcamp in Dec. 2019. I worked as a T.A. at Innovate for 2 years before moving on to JWEB Development.
           </p>
             <br />
           <p>
