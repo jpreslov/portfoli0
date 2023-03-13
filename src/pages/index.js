@@ -4,10 +4,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
-import XPSection from '@/components/XPSection'
 
 export default function Home() {
-
+  const xp = [
+    'JavaScript',
+    'TypeScript',
+    'React/Redux',
+    'Next.js',
+    'Material UI',
+    'SQL',
+    'Postgres',
+    'Express.js',
+    'Node.js'
+  ]
   return (
     <>
       <Head>
@@ -17,8 +26,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.navbar}>
-        </div>
+        {/* <div className={styles.navbar}>
+        </div> */}
 
         <div className={styles.name}>
           <h1>Jake Lovett</h1>
@@ -29,16 +38,21 @@ export default function Home() {
         </div>
 
         <div className={styles.summary}>
-          <p>
+          <p className={styles.summaryIntro}>
             My name is Jake.  I'm from Birmingham, AL, and I graduated from the Innovate Birmingham coding bootcamp in Dec. 2019. I worked as a T.A. at Innovate for 2 years before moving on to JWEB Development.
-            <br />
-            <br />
-            <br />
-            Experienced in:
-            <div className={styles.scrolling}>
-              <XPSection />
-            </div>
           </p>
+            <br />
+          <p>
+            Experienced in:
+          </p>
+          <ul className={styles.scrolling}>
+            {xp.map((item, id) => {
+              return (
+                <li key={id}>{item}</li>
+              )
+              }
+            )}
+          </ul>
         </div>
         <div className={styles.links}>
           <a

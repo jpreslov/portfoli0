@@ -1,14 +1,27 @@
 .main {
   font-family: var(--font-mono);
   color: rgb(96, 96, 176);
-  transition: .9s cubic-bezier(0.095, 0.82, 0.165, 1);
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
   background: #dbdbdb;
+}
+
+@media screen and (max-width: 480px) {
+  .summary {
+    max-width: 90vw;
+  }
+
+  .summaryIntro {
+    display: flex;
+    font-size: medium;
+  }
+
+  .scrolling {
+    font-size: small;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -17,41 +30,26 @@
     margin: 1em 2em;
     border: none;
   }
+
+  .summary {
+    width: 40%
+  }
 }
 
 .summary {
-  padding: 2em 7em;
-  margin: 0 7em 2em;
+  padding: 2em;
+  margin: 2em;
   border: 3px dotted rgb(96, 96, 176);
-  max-width: 80vw;
+  /* max-width: 80vw; */
   font-size: 22px;
   line-height: 1.5em;
-
-  @media screen and (max-width: 480px) {
-    padding: 2em;
-  }
 }
 
 .scrolling {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.navbar {
-  height: 4vh;
-  display: inherit;
-  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  min-width: 100vw;
-  z-index: 2;
-  margin-bottom: 1vh;
-  filter: contrast(800%), brightness(1000%);
-  background: linear-gradient(45deg, rgb(96, 96, 176), rgba(0, 0, 0, 0)), url(https://grainy-gradients.vercel.app/noise.svg);
-  @media screen and (max-width: 480px) {
-    height: 6vh;
-  }
+  line-height: 1.2em;
 }
 
 .links {
@@ -68,7 +66,7 @@
 }
 
 .logoSVGs:hover {
-  filter:opacity(40%);
+  filter: opacity(40%);
   transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
