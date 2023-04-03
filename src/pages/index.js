@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 // import { useEffect, useState } from 'react'
+import { useRef } from 'react'
 
 export default function Home() {
   const xp = [
@@ -26,9 +27,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.shapes}>
-        <div className={styles.rectangle}></div>
-        <div className={styles.ellipse}></div>
+      <div
+      styles={{
+      }}>
       </div>
       <main className={styles.main}>
         <div className={styles.name}>
@@ -41,7 +42,7 @@ export default function Home() {
             My name is Jake.  I am from Birmingham, AL, and I graduated from the Innovate Birmingham coding bootcamp in Dec. 2019. I worked as a T.A. at Innovate for 2 years before moving on to JWEB Development.
           </p>
             <br />
-          <p>
+          <p className={styles.xpHeader}>
             Experienced in:
           </p>
           <ul className={styles.scrolling}>
