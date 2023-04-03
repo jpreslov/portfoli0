@@ -3,7 +3,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 
 export default function Home() {
   const xp = [
@@ -17,6 +17,7 @@ export default function Home() {
     'Express.js',
     'Node.js'
   ]
+
   return (
     <>
       <Head>
@@ -25,16 +26,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.shapes}>
+        <div className={styles.rectangle}></div>
+        <div className={styles.ellipse}></div>
+      </div>
       <main className={styles.main}>
-        {/* <div className={styles.navbar}>
-        </div> */}
-
         <div className={styles.name}>
           <h1>Jake Lovett</h1>
           <p>Web Dev</p>
-        </div>
-
-        <div className={styles.dashes}>
         </div>
 
         <div className={styles.summary}>

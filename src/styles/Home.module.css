@@ -25,30 +25,30 @@
 }
 
 @media screen and (min-width: 480px) {
-  .dashes {
+  /* .dashes {
     display: block;
     margin: 1em 2em;
     border: none;
-  }
+  } */
 
   .summary {
-    width: 40%
+    width: 80%;
   }
 }
 
 .summary {
   padding: 2em;
   margin: 2em;
-  border: 3px dotted rgb(96, 96, 176);
-  /* max-width: 80vw; */
+  /* border: 3px dotted rgb(96, 96, 176); */
   font-size: 22px;
   line-height: 1.5em;
 }
 
 .scrolling {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: left;
+  margin-left: 1em;
   line-height: 1.2em;
 }
 
