@@ -32,8 +32,8 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <div className={styles.name}>
-          <h1>Jake Lovett</h1>
-          <p>Web Dev</p>
+          <h1 className={styles.nameText}>Jake Lovett</h1>
+          <p className={styles.nameText}>Web Dev</p>
         </div>
 
         <div className={styles.summary}>
@@ -70,20 +70,6 @@ export default function Home() {
           </a>
           <a
             href="https://www.linkedin.com/in/jake-lovett/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/linkedin-logo.svg"
-              alt="LinkedIn logo"
-              className={styles.logoSVGs}
-              width={50}
-              height={50}
-              priority
-            />
-          </a>
-          <a
-            href="jacob-lovett-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
